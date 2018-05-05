@@ -11,7 +11,7 @@
     "dev": "hugo server"
   },
   "husky": {
-    "pre-commit": "npm run build && git add ./docs"
+    "pre-commit": "npm run build && git add docs/*"
   },
   "repository": {
     "type": "git",
