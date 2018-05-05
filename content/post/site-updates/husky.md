@@ -46,7 +46,9 @@ config:
   "dev": "hugo server"
 },
 "husky": {
-  "pre-commit": "npm run build && git add docs/*"
+  "hooks": {
+    "pre-commit": "npm run build && git add docs/*"
+  }
 }
 ```
 

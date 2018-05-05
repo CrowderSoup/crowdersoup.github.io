@@ -102,7 +102,9 @@ config:</p>
   &quot;dev&quot;: &quot;hugo server&quot;
 },
 &quot;husky&quot;: {
-  &quot;pre-commit&quot;: &quot;npm run build &amp;&amp; git add docs/*&quot;
+  &quot;hooks&quot;: {
+    &quot;pre-commit&quot;: &quot;npm run build &amp;&amp; git add docs/*&quot;
+  }
 }
 </code></pre>
 
