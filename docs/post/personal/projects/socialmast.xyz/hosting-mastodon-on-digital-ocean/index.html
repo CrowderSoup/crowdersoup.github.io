@@ -9,7 +9,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Ubuntu|Ubuntu+Mono" rel="stylesheet">
 
-        <title>Projects</title>
+        <title>Hosting Mastodon on DitialOcean</title>
 
         <link rel="stylesheet" href="/css/stylesheet.css">
     </head>
@@ -59,44 +59,63 @@
         </section>
 
 
-<section>
-  <ul class="posts_listing">
+<div class="blog-post">
+  <h1>Hosting Mastodon on DitialOcean</h1>
+  <div class="blog-post-subheader">
+    <time>27 Nov 2018</time>
+  </div>
+  <div class="blog-post-content">
     
-    <li>
-      <div class="row" id="posts">
-        <div class="d-none d-sm-block col-sm-3 date-time-title">
-          <time>27 Nov 2018</time>
-        </div>
-        <div class="col-sm date-time-title post">
-          <a href="/post/personal/projects/socialmast.xyz/hosting-mastodon-on-digital-ocean/">Hosting Mastodon on DitialOcean</a>
-        </div>
-      </div>
-    </li>
-    
-    <li>
-      <div class="row" id="posts">
-        <div class="d-none d-sm-block col-sm-3 date-time-title">
-          <time>21 Jan 2016</time>
-        </div>
-        <div class="col-sm date-time-title post">
-          <a href="/post/raspberry-pi/torrent-machine-and-network-share/">Build a Torrent Machine and Network Share</a>
-        </div>
-      </div>
-    </li>
-    
-    <li>
-      <div class="row" id="posts">
-        <div class="d-none d-sm-block col-sm-3 date-time-title">
-          <time>27 Dec 2015</time>
-        </div>
-        <div class="col-sm date-time-title post">
-          <a href="/post/personal/life/christmas-2015/">Christmas of 2015</a>
-        </div>
-      </div>
-    </li>
-    
-  </ul>
-</section>
+
+<p>I&rsquo;ve been toying with the idea of setting up <a href="https://joinmastodon.org">Mastodon</a> on my own server for
+a while now. Today I finally got around to actually doing it (after a failed
+attempt a couple months ago). I found a <a href="https://github.com/ummjackson/mastodon-guide/blob/master/up-and-running.md">guide</a> that I loosely referred to
+and was immensely helpful at a couple points.</p>
+
+<p>At first I tried running on a super small $5 instance, which seemed fine during
+setup, but died every few requests when I started using it. I ended up bumping
+the server up to the $15 a month plan (3GB RAM, single CPU core) and things
+seem to be working fine now. I&rsquo;ll re-evaluate my plan if things start slowing
+down again.</p>
+
+<p>I&rsquo;m using docker to run Mastodon, so if you don&rsquo;t want to do that you&rsquo;ll have
+better luck with a different guide. I like Docker because it makes it easy to
+run the various things we need to run for Mastodon (<a href="https://sidekiq.org/">SideKiq</a>, PostgreSQL,
+etc.).</p>
+
+<h2 id="todo">TODO:</h2>
+
+<ol>
+<li>Set up mailgun</li>
+<li>Create a VPS</li>
+<li>Create your space</li>
+<li>Generate keys to use with your space</li>
+<li>Setup your VPS (install all the things)</li>
+<li>Install / Configure Mastodon</li>
+<li>Configure Nginx</li>
+<li>Set up SSL/HTTPS with Certbot</li>
+<li>Run Mastodon</li>
+<li>Configure Cron Jobs for upkeep</li>
+<li>Create your first user and make it an Admin</li>
+</ol>
+
+<!--Links-->
+
+  </div>
+  
+<div id="disqus_thread"></div>
+<script>
+  var disqus_shortname = 'aaroncrowder';
+  (function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
 
       <footer>
         <hr>
